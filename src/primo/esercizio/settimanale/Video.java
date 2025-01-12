@@ -23,7 +23,6 @@ public class Video extends PlayerMultimediale implements Volume, Luminosita,Ripr
         System.out.println("Stiamo caricando il tuo video...");
         for (int i = 0; i<= durata; i++){
             System.out.println(titolo + " " + "*".repeat(luminosita) + "!".repeat(volume)  );
-            //System.out.print( new String(new char[luminosita]).replace("\0","!");
         }
     }
     @Override
