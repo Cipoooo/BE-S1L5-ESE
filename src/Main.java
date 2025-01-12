@@ -10,7 +10,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Quale elemento vuole riprodurre? DIgitare 1 per vedere un immagine, 2 per un Video e 3 Per una registrazione Audio ");
         int scelta = scanner.nextInt();
-        String inutile = scanner.nextLine();
+        String ponte = scanner.nextLine();
         System.out.println("Digitare un titolo per l' elemento da lei scelto");
         String titolo = scanner.nextLine();
 

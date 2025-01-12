@@ -1,6 +1,6 @@
 package primo.esercizio.settimanale;
 
-public class Audio implements Volume {
+public class Audio extends PlayerMultimediale implements Volume {
 
     protected int durata;
     protected int volume;
@@ -12,12 +12,15 @@ public class Audio implements Volume {
         this.titolo = titolo;
     }
 
+    @Override
     public void play(){
         System.out.println("Stiamo caricando il tuo audio...");
         for (int i = 0; i<= durata; i++){
             System.out.println(titolo + new String(new char[volume]).replace("\0","!"));
         }
     }
+    @Override
+    public void show(){}
 
     @Override
     public void alzaVolume(){

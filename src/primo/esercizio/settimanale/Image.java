@@ -1,6 +1,6 @@
 package primo.esercizio.settimanale;
 
-public class Image implements Luminosita{
+public class Image extends PlayerMultimediale implements Luminosita{
 
     protected int luminosita;
     String titolo;
@@ -9,6 +9,7 @@ public class Image implements Luminosita{
         this.titolo = titolo;
         this.luminosita = luminosita;
     }
+    @Override
     public void show(){
         System.out.println("La tua immagine è:");
         System.out.print(titolo);
@@ -16,6 +17,8 @@ public class Image implements Luminosita{
           System.out.print( new String(new char[luminosita]).replace("\0","*"));
         }
     }
+    @Override
+    public void play(){}
 
     @Override
     public void aumentaLuminosita(){luminosita++;}

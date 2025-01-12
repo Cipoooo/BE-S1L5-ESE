@@ -1,6 +1,6 @@
 package primo.esercizio.settimanale;
 
-public class Video implements Luminosita {
+public class Video extends PlayerMultimediale implements Luminosita {
 
     protected int luminosita;
     protected int durata;
@@ -14,6 +14,7 @@ public class Video implements Luminosita {
           this.titolo = titolo;
     }
 
+    @Override
     public void play(){
         System.out.println("Stiamo caricando il tuo video...");
         for (int i = 0; i<= durata; i++){
@@ -21,6 +22,8 @@ public class Video implements Luminosita {
             //System.out.print( new String(new char[luminosita]).replace("\0","!");
         }
     }
+    @Override
+    public void show(){}
 
     @Override
     public void aumentaLuminosita(){luminosita++;}
