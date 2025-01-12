@@ -1,8 +1,9 @@
 package primo.esercizio.settimanale;
 
-abstract class PlayerMultimediale {
+ public abstract class PlayerMultimediale {
 
-    public abstract void show();
-    public abstract void play();
+  //Dovrei inserire il titolo ma non ho ben capito il motivo per cui inserire qui il titolo visto che lo passo come parametro nei vari metodi
+
+   public abstract void esegui();
 
 }

@@ -1,6 +1,6 @@
 package primo.esercizio.settimanale;
 
-public class Video extends PlayerMultimediale implements Luminosita {
+public class Video extends PlayerMultimediale implements Volume, Luminosita,Riproducibile {
 
     protected int luminosita;
     protected int durata;
@@ -15,19 +15,29 @@ public class Video extends PlayerMultimediale implements Luminosita {
     }
 
     @Override
+    public void esegui(){
+        play();
+    }
+
     public void play(){
         System.out.println("Stiamo caricando il tuo video...");
         for (int i = 0; i<= durata; i++){
-            System.out.println(titolo + new String(new char[volume]).replace("\0","*" + "!"));
+            System.out.println(titolo + " " + "*".repeat(luminosita) + "!".repeat(volume)  );
             //System.out.print( new String(new char[luminosita]).replace("\0","!");
         }
     }
-    @Override
-    public void show(){}
-
     @Override
     public void aumentaLuminosita(){luminosita++;}
 
     @Override
     public void diminuisciLuminosita(){luminosita--;}
+
+    @Override
+    public void alzaVolume(){volume++;}
+
+    @Override
+    public void abbassaVolume(){
+        if (volume > 0) {
+            volume--;
+        }}
 }
